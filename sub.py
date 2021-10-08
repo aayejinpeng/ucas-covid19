@@ -150,7 +150,7 @@ def submit(s: requests.Session, old: dict):
         'jrsflj': old['jrsflj'],  # add @2020.9.16
         'app_id': 'ucas'
     }
-
+    new_daily['szdd'] = "国内"
     check_data_msg = check_submit_data(new_daily)  # 检查上报结果
     if check_data_msg is not None:
         message(api_key, sender_email, sender_email_passwd, receiver_email, tg_bot_token,
