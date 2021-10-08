@@ -109,7 +109,7 @@ def submit(s: requests.Session, old: dict):
         # 'szgj': old['szgj'],# 2021.8.1 del
         # 'old_sfzx': old['sfzx'],# 2021.8.1 del
         'sfzx': old['sfzx'],
-        'szdd': old['szdd'],
+        'szdd': "国内",
         'ismoved': 0,  # 如果前一天位置变化这个值会为1，第二天仍然获取到昨天的1，而事实上位置是没变化的，所以置0
         # 'ismoved': old['ismoved'],
         'tw': old['tw'],
@@ -128,7 +128,7 @@ def submit(s: requests.Session, old: dict):
         'sfcxzysx': old['sfcxzysx'],
         # 'old_szdd': old['szdd'],# 2021.8.1 del
         'geo_api_info': old['old_city'],  # 保持昨天的结果
-        'old_city': old['old_city'],
+        'old_city': "北京市怀柔区",
         'geo_api_infot': old['geo_api_infot'],
         'date': datetime.now(tz=pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d"),
         # 'fjsj': old['fjsj'],  # 返京时间# 2021.8.1 del
